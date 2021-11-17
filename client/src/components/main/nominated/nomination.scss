@@ -1,0 +1,42 @@
+$height_img:450px;
+
+.nomication_movie {
+    position: relative;
+    .btn{
+        position: absolute;
+        width: 100%;
+        transform: translateY($height_img/2 - 24px);
+        // transform: translateY(50%);
+        // margin-bottom:50%;
+        display: flex;
+        justify-content: space-between;
+
+        z-index: 2;
+
+        button{
+            padding:4px 8px;
+            font-size: 24px;
+        }
+    }
+    .addMargin {
+        position: relative;
+        .slick-list {
+            margin-left: -10px;
+            margin-right: -10px;
+            .slick-track {
+                .slick-slide {
+                    div {
+                        width: 100%;
+                        a {
+                            img {
+                                padding-left:10px;
+                                padding-right:10px;
+                                height: 450px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

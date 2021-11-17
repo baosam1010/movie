@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+
+    div {
+        a {
+            display: block;
+            img {
+                width: 160px;
+            }
+        }
+    }
+    ul {
+        display: flex;
+        font-size: 16px;
+        font-weight: normal;
+        li {
+            margin: 0 8px;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color:white;
+            }
+            a:hover{
+             color:orange;                
+            }
+        }
+        
+    }
+}
