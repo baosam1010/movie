@@ -40,6 +40,7 @@ function Movies(props) {
     console.log('filmCategory', film)
     const showItem = (film) => {
         let html = null;
+        console.log(html)
         if (film) {
             html = (
                 <Container fluid className="">
@@ -64,6 +65,7 @@ function Movies(props) {
                                         className="w-100 d-block absolute bottom-0 overflow-hidden rounded-bottom px-2  bg-secondary bg-opacity-50 lineWord  d-block text-decoration-none text-yellow-400 fs-5 fw-bold  py-2 text-nowrap "
                                     >
                                         {title}
+                                        
                                     </Link>
                                 </Col>
                             )
