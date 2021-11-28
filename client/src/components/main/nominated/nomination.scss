@@ -5,12 +5,13 @@ $height_img:450px;
     .btn{
         position: absolute;
         width: 100%;
-        transform: translateY($height_img/2 - 24px);
-        // transform: translateY(50%);
-        // margin-bottom:50%;
+
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+
         display: flex;
         justify-content: space-between;
-
         z-index: 2;
 
         button{
@@ -28,10 +29,17 @@ $height_img:450px;
                     div {
                         width: 100%;
                         a {
+                            display: block;
+                            overflow: hidden;
                             img {
                                 padding-left:10px;
                                 padding-right:10px;
                                 height: 450px;
+
+                                &:hover{
+                                    transition: 0.5s ease;
+                                    transform: scale(1.05);
+                                }
                             }
                         }
                     }

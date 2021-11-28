@@ -13,34 +13,24 @@ function Header() {
                 <div>
                     <ul>
                         <li>
-                            <Link to="/category/phimmoi">Phim mới</Link>
+                            <Link to="/category/phimbo">Phim Bộ</Link>
                         </li>
                         <li>
-                            <Link to="/category/phimhay">Phim hay</Link>
+                            <Link to="/category/phimle">Phim Lẻ</Link>
                         </li>
                         <li>
                             <Link to="/category/phimchieurap">Phim chiếu rạp</Link>
                         </li>
                         <li>
-                            <Link to="/category/phimhanhdong">Phim hành động</Link>
+                            <Link to="/category/phimhoathinh">Phim Hoạt Hình</Link>
                         </li>
                         <li>
-                            Phim bộ
-                            <ul className="submenu">
-                                <li>
-                                    <Link to="/category/hanquoc">Hàn Quốc</Link>
-                                </li>
-                                <li>
-                                    <Link to="/category/trungquoc">Trung Quốc</Link>
-                                </li>
-                                <li>
-                                    <Link to="/category/my">Mỹ</Link>
-                                </li>
-                            </ul>
+                            <Link to="/category/phimhanhdong"> Phim Hành Động</Link>
+                            
                         </li>
                         <li>
-                            Phim lẻ
-                            <ul className="submenu">
+                            <Link to="/category/phimtinhcam"> Phim Tình Cảm</Link>
+                            {/* <ul className="submenu">
                                 <li>
                                     <Link to="/category/2015">Năm 2015</Link>
                                 </li>
@@ -62,7 +52,7 @@ function Header() {
                                 <li>
                                     <Link to="/category/2021">Năm 2021</Link>
                                 </li>
-                            </ul>
+                            </ul> */}
                         </li>
                     </ul>
                     <div>

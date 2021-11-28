@@ -1,12 +1,36 @@
-.movies{
+.movies {
+    .movies_category {
+        &-link {
+            color: black;
 
-    .movie-category{
-        .movie-category_link{
-            &hover{
-                color:orange;
+            &:hover {
+                color: white;
+                opacity: 0.8;
             }
         }
     }
-    
-    
+    .movies-item-wrapper {
+        margin-top: 20px;
+        &-row {
+            &-column {               
+                a {
+                    color: white;
+                    img {
+                        object-fit: cover;
+                        height: 350px;
+                        &:hover {
+                            transition: .5s ease;
+                            transform: scale(1.05);
+                        }
+                    }
+                    &:hover {
+                        color: orange;
+                        background-color: black;
+                        opacity: 0.8;
+                    }
+                }
+                
+            }
+        }
+    }
 }

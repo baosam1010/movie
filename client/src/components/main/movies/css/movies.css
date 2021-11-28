@@ -1,4 +1,33 @@
-.movies .movie-category .movie-category_linkhover {
+.movies .movies_category-link {
+  color: black;
+}
+
+.movies .movies_category-link:hover {
+  color: white;
+  opacity: 0.8;
+}
+
+.movies .movies-item-wrapper {
+  margin-top: 20px;
+}
+
+.movies .movies-item-wrapper-row-column a {
+  color: white;
+}
+
+.movies .movies-item-wrapper-row-column a img {
+  object-fit: cover;
+  height: 350px;
+}
+
+.movies .movies-item-wrapper-row-column a img:hover {
+  transition: .5s ease;
+  transform: scale(1.05);
+}
+
+.movies .movies-item-wrapper-row-column a:hover {
   color: orange;
+  background-color: black;
+  opacity: 0.8;
 }
 /*# sourceMappingURL=movies.css.map */

@@ -5,7 +5,9 @@
 .nomication_movie .btn {
   position: absolute;
   width: 100%;
-  transform: translateY(201px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: space-between;
   z-index: 2;
@@ -29,9 +31,19 @@
   width: 100%;
 }
 
+.nomication_movie .addMargin .slick-list .slick-track .slick-slide div a {
+  display: block;
+  overflow: hidden;
+}
+
 .nomication_movie .addMargin .slick-list .slick-track .slick-slide div a img {
   padding-left: 10px;
   padding-right: 10px;
   height: 450px;
+}
+
+.nomication_movie .addMargin .slick-list .slick-track .slick-slide div a img:hover {
+  transition: 0.5s ease;
+  transform: scale(1.05);
 }
 /*# sourceMappingURL=nomination.css.map */

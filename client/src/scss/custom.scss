@@ -1,0 +1,58 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+$all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+);
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color":
+      map-merge(
+        map-get($utilities, "color"),
+        (
+          values: map-merge(map-get(map-get($utilities, "color"), "values"), ($all-colors)),
+        )
+      ),
+    "width":
+      map-merge(
+        map-get($utilities, "width"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "width"), "values"),
+              (
+                10: 10%,
+                95: 95%,
+              )
+            ),
+        )
+      ),
+    "negative-margin-x": (
+      responsive: true,
+      property: margin-right margin-left,
+      class: mx,
+      values: $negative-spacers,
+    ),
+  )
+);
+
+
+
+
+
+@import "bootstrap/scss/utilities/_api";

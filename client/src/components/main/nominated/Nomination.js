@@ -47,7 +47,7 @@ function Nomination(props) {
             setMovies(null);
         }
     }, [])
-    console.log('movies:', movies)
+    // console.log('movies:', movies)
     function NextArrow(props) {
         const { className, style, onClick } = props;
         return (
@@ -86,7 +86,7 @@ function Nomination(props) {
                 // console.log('nameMovie:', nameMovie);  
                 return (
 
-                    <Link to={`${nameMovie}`} key={item.url}>
+                    <Link to={`${nameMovie}`} key={item.url} className="w-100 d-block overflow-hidden">
                         <img
                             className="d-block w-100"
                             src={item.imageUrl}

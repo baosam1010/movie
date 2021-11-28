@@ -1,6 +1,6 @@
 import Main from "../components/main/Main";
-import ListMovies from "../pages/ListMovies";
-import MoviesPage from "../pages/MoviePage";
+import ListMovies from "../pages/listpage/ListMovies";
+import MoviePage from "../pages/moviepage/MoviePage";
 import NotFound from "../pages/NotFound";
 
 const routes = [
@@ -12,17 +12,17 @@ const routes = [
     {
         path: "/:slug",
         exact: true, 
-        component:MoviesPage 
+        component: MoviePage 
     },
     {
         path: "category/:slug",
         exact: true, 
-        component:ListMovies 
+        component: ListMovies 
     },
     {
         path: "*",
         exact:false, 
-        component:NotFound
+        component: NotFound
     }
 ];
 export default routes;

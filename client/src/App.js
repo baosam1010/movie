@@ -10,32 +10,47 @@ import {
 
 } from "react-router-dom";
 import routes from './routes/routes';
+import { useState } from 'react';
+import LoadingItem from './components/loadingItem/LoadingItem';
 
-const showRoutes = (routes) => {
+const showRoutes = (routes, loading, setLoading) => {
   let result = null;
   result = routes.map((route) => {
     const { path, exact, component: Component } = route;
+    // console.log("loading:", loading)
     return (<Route
       key={Component}
       path={path}
       exact={exact}
-      element={<Component />}
+      element={
+        <Component
+          loading={loading}
+          setLoading={setLoading}
+          
+        />
+      }
     />)
   })
   return result;
-}
-function App() {
+};
+
+function App(props) {
+  const [loading, setLoading] = useState(false);
+
+  
   return (
-    <div className="">
+    <div className="bg-secondary">
       <Header />
       <div className="mt-5 mb-5">
         <Container >
           <Routes >
-            {showRoutes(routes)}
+            {showRoutes(routes, loading, setLoading)}
           </Routes>
         </Container>
+
       </div>
       <Footer />
+      {loading ? <LoadingItem /> : null}
     </div>
   );
 }

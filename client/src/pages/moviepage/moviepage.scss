@@ -1,0 +1,79 @@
+.moviepage{
+    &-wrapper{
+        div{
+            
+            div{
+                margin-top:20px;
+                background-color:#282828;
+                ul{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-items: start;
+                    padding-top:12px;
+                    li{
+                        padding-right: 30px;
+                        a{
+                            color:orange;
+                            &:hover{
+                                opacity: 0.6;
+                            }
+                        }
+                        &:after{
+                            content:"/";
+                            display: inline-block;
+                            position:absolute;
+                            font-size: 16px;
+                            margin-left: 8px;
+                            color: white;
+
+                        }
+                    }
+                    
+                }
+                .movie-name{
+                    color: orange;
+                    padding: 4px 8px;
+                    margin-bottom: 20px;
+                    &:hover{
+                        opacity: 0.6;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    &-post{
+        padding: 15px;
+        
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: black;
+        opacity: 0.75;
+
+        ul{
+            li{
+                padding-bottom:4px;
+                border-bottom: 1px solid black;
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
+                p{
+                    margin: 0px;
+                }
+               
+            }
+        }
+    }
+    form{
+        div{
+            .mx-n15{
+                margin: 0 -15px;
+            }
+        }
+        button{
+            width: 100px;
+        }
+    }
+}

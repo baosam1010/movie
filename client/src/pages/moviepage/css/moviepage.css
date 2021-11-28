@@ -1,0 +1,75 @@
+.moviepage-wrapper div div {
+  margin-top: 20px;
+  background-color: #282828;
+}
+
+.moviepage-wrapper div div ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: start;
+  padding-top: 12px;
+}
+
+.moviepage-wrapper div div ul li {
+  padding-right: 30px;
+}
+
+.moviepage-wrapper div div ul li a {
+  color: orange;
+}
+
+.moviepage-wrapper div div ul li a:hover {
+  opacity: 0.6;
+}
+
+.moviepage-wrapper div div ul li:after {
+  content: "/";
+  display: inline-block;
+  position: absolute;
+  font-size: 16px;
+  margin-left: 8px;
+  color: white;
+}
+
+.moviepage-wrapper div div .movie-name {
+  color: orange;
+  padding: 4px 8px;
+  margin-bottom: 20px;
+}
+
+.moviepage-wrapper div div .movie-name:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.moviepage-post {
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: black;
+  opacity: 0.75;
+}
+
+.moviepage-post ul li {
+  padding-bottom: 4px;
+  border-bottom: 1px solid black;
+}
+
+.moviepage-post ul li img {
+  width: 40px;
+  height: 40px;
+}
+
+.moviepage-post ul li p {
+  margin: 0px;
+}
+
+.moviepage form div .mx-n15 {
+  margin: 0 -15px;
+}
+
+.moviepage form button {
+  width: 100px;
+}
+/*# sourceMappingURL=moviepage.css.map */
