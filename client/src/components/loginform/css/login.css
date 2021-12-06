@@ -1,0 +1,76 @@
+.loginform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loginform form {
+  background-image: linear-gradient(to right, orange, violet);
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.loginform form h1 {
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.loginform form input {
+  min-width: 300px;
+  padding: 4px 8px;
+  margin-bottom: 4px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.loginform form #errorname {
+  color: red;
+  padding-bottom: 4px;
+}
+
+.loginform form #errorpassword {
+  color: red;
+  padding-bottom: 4px;
+}
+
+.loginform form #confirmpassword {
+  color: red;
+  padding-bottom: 4px;
+}
+
+.loginform form div {
+  font-size: 12px;
+  color: white;
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loginform form div button {
+  color: white;
+  font-size: 16px;
+  max-width: 60px;
+  background-color: transparent;
+  border: none;
+}
+
+.loginform form div button:hover {
+  opacity: 0.6;
+}
+
+.loginform form div a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.loginform form div a:hover {
+  opacity: 0.6;
+}
+/*# sourceMappingURL=login.css.map */

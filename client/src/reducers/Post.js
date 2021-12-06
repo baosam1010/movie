@@ -9,17 +9,14 @@ const PostReducer = (state = initialState, action)=>{
 
             return state
         case Types.ADD_POST:
-            // console.log('addaction.post', action.payload)
-            // state.push(action.payload)
-
-            // console.log('state_POST_REDUCER:',state)
+            
             return state;
 
         case Types.ADD_POST_SUCCESS:
             const {payload} = action.data;
-            // console.log('actionADDSuccess:', action.data)
             state.push(payload)
-            return state
+            return state;
+            
         default: return state;
     }
 };

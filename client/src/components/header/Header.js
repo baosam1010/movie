@@ -1,68 +1,84 @@
 import { Link } from 'react-router-dom';
 import './css/header.css';
 import Container from 'react-bootstrap/Container';
+// import { useState } from 'react';
+import { FastField, Formik, Form } from 'formik';
+import { connect } from 'react-redux';
+import { addSearch } from '../../actions/Search';
 
-function Header() {
+
+function Header(props) {
+
+    // const [search, setSearch] = useState('')
+    const {onSearch} = props;
+
     return (
-            <Container fluid className="wrapper" >
-                <div>
+        <Container fluid className="wrapper" >
+            <div className="wrapper-nav">
+                <div className="wrapper-nav-logo">
                     <Link to="/">
                         <img src="https://phimchill.tv/dev/images/logo.png" alt="logo" />
                     </Link>
                 </div>
-                <div>
-                    <ul>
-                        <li>
-                            <Link to="/category/phimbo">Phim Bộ</Link>
-                        </li>
-                        <li>
-                            <Link to="/category/phimle">Phim Lẻ</Link>
-                        </li>
-                        <li>
-                            <Link to="/category/phimchieurap">Phim chiếu rạp</Link>
-                        </li>
-                        <li>
-                            <Link to="/category/phimhoathinh">Phim Hoạt Hình</Link>
-                        </li>
-                        <li>
-                            <Link to="/category/phimhanhdong"> Phim Hành Động</Link>
-                            
-                        </li>
-                        <li>
-                            <Link to="/category/phimtinhcam"> Phim Tình Cảm</Link>
-                            {/* <ul className="submenu">
-                                <li>
-                                    <Link to="/category/2015">Năm 2015</Link>
-                                </li>
-                                <li>
-                                    <Link to="/category/2016">Năm 2016</Link>
-                                </li>
-                                <li>
-                                    <Link to="/category/2017">Năm 2017</Link>
-                                </li>
-                                <li>
-                                    <Link to="/category/2018">Năm 2018</Link>
-                                </li>
-                                <li>
-                                    <Link to="/category/2019">Năm 2019</Link>
-                                </li>
-                                <li>
-                                    <Link to="/category/2020">Năm 2020</Link>
-                                </li>
-                                <li>
-                                    <Link to="/category/2021">Năm 2021</Link>
-                                </li>
-                            </ul> */}
-                        </li>
-                    </ul>
-                    <div>
-                        <input type="text" placeholder="Bạn muốn tìm gì..." />
-                        <button><i className="btn-search fas fa-search"></i></button>
-                    </div>
+                <ul>
+                    <li>
+                        <Link to="/category/phimbo">Phim Bộ</Link>
+                    </li>
+                    <li>
+                        <Link to="/category/phimle">Phim Lẻ</Link>
+                    </li>
+                    <li>
+                        <Link to="/category/phimchieurap">Phim chiếu rạp</Link>
+                    </li>
+                    <li>
+                        <Link to="/category/phimhoathinh">Phim Hoạt Hình</Link>
+                    </li>
+                    <li>
+                        <Link to="/category/phimhanhdong"> Phim Hành Động</Link>
+
+                    </li>
+                    <li>
+                        <Link to="/category/phimtinhcam"> Phim Tình Cảm</Link>
+                    </li>
+                </ul>
+                <div className="">
+                    <Link to="/login">Login</Link>
+                    <span>/</span>
+                    <Link to="/register">Register</Link>
                 </div>
-            </Container>
+            </div>
+            <div className="search">
+                <Formik
+                    initialValues={{ search: '', }}
+
+                    onSubmit={(values)=>{
+                        console.log(values);
+                        if(values){
+                            onSearch(values)   
+                        }
+                    }}
+                >
+                    {props => (
+                        <Form>
+                            <FastField type="text" name='search' value={props.values.search} placeholder="Bạn muốn tìm gì..." />
+                            {/* {props.values.search !==''?(<Link to={`/lists/${props.values.search.trim().replace(/ /g, '-')}`}><i className="btn-search fas fa-search"></i></Link>):(
+                            <button type="submit"><i className="btn-search fas fa-search"></i></button>
+                            )} */}
+                            
+                            <Link  to={props.values.search.trim() !==''? `/lists/${props.values.search.trim().replace(/ /g, '-')}`:'#'}><i className="btn-search fas fa-search"></i></Link>
+                        </Form>
+                    )}
+                </Formik>
+            </div>
+        </Container>
     )
 }
 
-
-export default Header;
+const mapDispatchToProps= (dispatch)=>{
+    return {
+        onSearch:(search)=>{
+            dispatch(addSearch(search))
+        }
+    }
+}
+export default connect(null, mapDispatchToProps) (Header);

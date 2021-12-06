@@ -12,8 +12,10 @@ import {
 import routes from './routes/routes';
 import { useState } from 'react';
 import LoadingItem from './components/loadingItem/LoadingItem';
+import './scss/css/custom.css';
 
-const showRoutes = (routes, loading, setLoading) => {
+
+const showRoutes = (routes, loading, setLoading, handleLoading) => {
   let result = null;
   result = routes.map((route) => {
     const { path, exact, component: Component } = route;
@@ -26,7 +28,6 @@ const showRoutes = (routes, loading, setLoading) => {
         <Component
           loading={loading}
           setLoading={setLoading}
-          
         />
       }
     />)
@@ -38,13 +39,16 @@ function App(props) {
   const [loading, setLoading] = useState(false);
 
   
+  
   return (
     <div className="bg-secondary">
       <Header />
       <div className="mt-5 mb-5">
         <Container >
           <Routes >
-            {showRoutes(routes, loading, setLoading)}
+
+            {showRoutes(routes, loading, setLoading, )}
+
           </Routes>
         </Container>
 
@@ -55,4 +59,4 @@ function App(props) {
   );
 }
 
-export default App;
+export default (App);

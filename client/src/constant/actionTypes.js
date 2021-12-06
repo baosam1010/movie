@@ -1,6 +1,8 @@
 export const API_MOVIES = 'https://api.apify.com/v2/key-value-stores/QubTry45OOCkTyohU/records/LATEST?fbclid=IwAR2YqtYz9YMi9NAuYMHIwCapR7B2_P7xUoGVrSdvFovDeNG6Ekrs-fGaHV8.html'
 
 
+export const SEARCH = 'SEARCH';
+export const ADD_SEARCH_SUCCESS = 'ADD_SEARCH_SUCCESS';
 export const GET_POST = ' GET_POST';
 export const ADD_POST = 'ADD_POST';
 export const ADD_POST_SUCCESS = 'ADD_POST_SUCCESS';

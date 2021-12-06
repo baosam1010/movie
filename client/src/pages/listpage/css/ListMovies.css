@@ -1,1 +1,46 @@
-/* No CSS *//*# sourceMappingURL=ListMovies.css.map */
+.container {
+  min-height: 100vh;
+}
+
+.container .listmovie-nav ol {
+  text-align: center;
+  font-size: 16px;
+  color: orange;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.container .listmovie-nav ol li i {
+  margin-right: 4px;
+}
+
+.container .listmovie-nav ol li a {
+  text-decoration: none;
+  color: orange;
+  font-weight: 600;
+}
+
+.container .listmovie-nav ol li a:hover {
+  opacity: 0.8;
+}
+
+.container .listmovie-nav ol span {
+  font-size: 12px;
+}
+
+.container .listmovie-info h1 {
+  font-size: 14px;
+  margin: 20px 0px;
+  padding: 20px;
+  background-color: #423e3e;
+  color: white;
+  line-height: 24px;
+}
+
+.container .listmovie-info h1 span {
+  color: orange;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=ListMovies.css.map */
